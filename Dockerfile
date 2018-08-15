@@ -1,6 +1,4 @@
-FROM jenkins:latest
+FROM node:7-alpine
 
-EXPOSE 8080
-
-CMD ["/var/jenkins_home/secrets/initialAdminPassword"]
+RUN apk add -U subversion
 
