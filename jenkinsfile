@@ -3,7 +3,7 @@ pipeline {
     stages{
        stage('Buid'){
 	   steps{
-	      sh 'docker run -d --name jenkins2 -p 5668:8080 jenkins:latest'
+	      sh "docker run -d --name jenkins2 -p 5668:8080 jenkins:latest"
 	   }		
        } 
     }
