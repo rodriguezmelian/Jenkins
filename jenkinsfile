@@ -3,7 +3,7 @@ pipeline {
     stages{
        stage('Buid'){
 	   steps{
-	      sh 'docker image ls'
+	      sh 'mvn clean package'
 	   }		
        } 
     }
