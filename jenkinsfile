@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo 'node --version'
-                echo 'svn --version'
+                echo 'Hello Word'             
             }
         }
     }
