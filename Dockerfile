@@ -1,3 +1,5 @@
-FROM php:7.1-apache
-COPY src/ /var/www/html
-EXPOSE 80
+FROM tomcat:8.0
+
+ADD ./webapp/target/*.war  /usr/local/tomcat/webapps/
+
+EXPOSE 8080
