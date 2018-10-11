@@ -1,10 +1,9 @@
-pipeline {
-    agent { 
-            docker {'docker ls'}
-        }
-    }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
+node {
+    DOCKER_HOME = tool "docker"
+    sh """
+        echo $DOCKER_HOME
+        ls $DOCKER_HOME/bin/
+        $DOCKER_HOME/bin/docker images
+        $DOCKER_HOME/bin/docker ps -a
+    """
 }
