@@ -2,9 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Example') {
-            steps {
-                sh 'docker ls'
-            }
+            docker {'docker ls'}
         }
     }
     post { 
