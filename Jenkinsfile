@@ -3,18 +3,7 @@ pipeline {
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'maven:3-alpine' }
-            }
-            steps {
-                sh 'mvn --version'
-            }
-        }
-        stage('Front-end') {
-            agent {
-                docker { image 'node:7-alpine' }
-            }
-            steps {
-                sh 'node --version'
+                sh ('docker login spvaksdesatest.azurecr.io -u spvaksdesatest -p AAI8SP6P05SAX46u+WdFWr9VcMd4yRKz')
             }
         }
     }
