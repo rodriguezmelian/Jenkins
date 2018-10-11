@@ -1,12 +1,6 @@
 pipeline {
     agent {
-        docker { pull 'node:7-alpine' }
-    }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-            }
-        }
+        stage('Build Image')
+        sh 'docker pull my-account/image:version
     }
 }
