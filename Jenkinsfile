@@ -1,10 +1,20 @@
 pipeline {
-    agent any
+    agent none
     stages {
-        stage('build') {
+        stage('Back-end') {
+            agent {
+                docker { image 'maven:3-alpine' }
+            }
             steps {
-                sh 'mvn clean package'
-                sh "docker build . -t -tomcatwebapp:${env.BUILD_ID}"      
+                sh 'mvn --version'
+            }
+        }
+        stage('Front-end') {
+            agent {
+                docker { image 'node:7-alpine' }
+            }
+            steps {
+                sh 'node --version'
             }
         }
     }
