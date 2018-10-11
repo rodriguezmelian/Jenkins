@@ -1,6 +1,5 @@
 pipeline {
-    agent any
-    stages {
+    agent 
         stage('Example') {
             docker {'docker ls'}
         }
