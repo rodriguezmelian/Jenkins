@@ -1,9 +1,8 @@
 pipeline {
-	stage('Run Image')
+	stage('Run Image'){
         sh "pwd"
          }
-	stage('Run Image')
-        sh "ls"
-         }
+	stage('Run Image'){
+        sh "ls" 
     }
 }
