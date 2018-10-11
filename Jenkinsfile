@@ -2,11 +2,11 @@ pipeline {
 	stage('Run Image')
 	     {
 		steps{
-            sh "docker pull nginx:latest"
+            sh "pwd"
          }
 	stage('Run Image')
 		steps{
-            sh "docker pull nginx:latest"
+            sh "ls"
          }
     }
 }
