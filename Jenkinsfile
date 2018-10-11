@@ -1,6 +1,8 @@
 pipeline {
-    agent {
-        stage('Build Image')
-        sh 'docker pull nginx:latest'
+stage('Run Image')
+		{
+			steps{
+            sh "docker pull nginx:latest"
+         }
     }
 }
